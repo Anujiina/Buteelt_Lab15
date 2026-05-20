@@ -27,15 +27,14 @@ public final class StringUtils {
         }
         return Character.toUpperCase(s.charAt(0)) + s.substring(1);
     }
-
 /**
-     * String-ийг урвуу болгох.
-     */
-    public static String reverse(String s) {
-        if (s == null) {
-            return null;
-        }
-
-        return new StringBuilder(s).reverse().toString();
+ * String-ийг урвуу болгох.
+ */
+public static String reverse(String s) {
+    if (s == null) {
+        return null;
     }
+
+    return new StringBuilder(s).reverse().toString();
+}
 }
