@@ -2,8 +2,6 @@
 
 /**
  * String-тэй ажиллах туслах утга.
- *
- * Lab15 — Даалгавар 2-т `reverse` функц өөрөө нэмэх болно.
  */
 public final class StringUtils {
 
@@ -15,19 +13,31 @@ public final class StringUtils {
      * Хоосон болон null-ийг шалгах.
      */
     public static boolean isBlank(String s) {
-<span class="nc bnc" id="L18" title="All 4 branches missed.">        return s == null || s.trim().isEmpty();</span>
+<span class="fc bfc" id="L16" title="All 4 branches covered.">        return s == null || s.trim().isEmpty();</span>
     }
 
     /**
-     * Үгийн эхний үсгийг том болгох (бусад нь хэвээр).
+     * Үгийн эхний үсгийг том болгох.
      */
     public static String capitalize(String s) {
-<span class="nc bnc" id="L25" title="All 2 branches missed.">        if (isBlank(s)) {</span>
-<span class="nc" id="L26">            return s;</span>
+
+<span class="fc bfc" id="L24" title="All 2 branches covered.">        if (isBlank(s)) {</span>
+<span class="fc" id="L25">            return s;</span>
         }
-<span class="nc" id="L28">        return Character.toUpperCase(s.charAt(0)) + s.substring(1);</span>
+
+<span class="fc" id="L28">        return Character.toUpperCase(s.charAt(0)) + s.substring(1);</span>
     }
 
-    // TODO (Даалгавар 2): public static String reverse(String s) { ... }
+    /**
+     * String-ийг урвуу болгох.
+     */
+    public static String reverse(String s) {
+
+<span class="pc bpc" id="L36" title="1 of 2 branches missed.">        if (s == null) {</span>
+<span class="nc" id="L37">            return null;</span>
+        }
+
+<span class="fc" id="L40">        return new StringBuilder(s).reverse().toString();</span>
+    }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

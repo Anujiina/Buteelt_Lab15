@@ -2,8 +2,6 @@ package lab;
 
 /**
  * String-тэй ажиллах туслах утга.
- *
- * Lab15 — Даалгавар 2-т `reverse` функц өөрөө нэмэх болно.
  */
 public final class StringUtils {
 
@@ -19,14 +17,26 @@ public final class StringUtils {
     }
 
     /**
-     * Үгийн эхний үсгийг том болгох (бусад нь хэвээр).
+     * Үгийн эхний үсгийг том болгох.
      */
     public static String capitalize(String s) {
+
         if (isBlank(s)) {
             return s;
         }
+
         return Character.toUpperCase(s.charAt(0)) + s.substring(1);
     }
 
-    // TODO (Даалгавар 2): public static String reverse(String s) { ... }
+    /**
+     * String-ийг урвуу болгох.
+     */
+    public static String reverse(String s) {
+
+        if (s == null) {
+            return null;
+        }
+
+        return new StringBuilder(s).reverse().toString();
+    }
 }
