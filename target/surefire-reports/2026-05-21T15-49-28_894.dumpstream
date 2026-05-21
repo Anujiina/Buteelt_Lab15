@@ -1,4 +1,4 @@
-# Created at 2026-05-20T10:53:37.816
+# Created at 2026-05-21T15:49:29.400
 Boot Manifest-JAR contains absolute paths in classpath 'D:\Buteelt\Lab15\ButeeltLab_15\target\test-classes'
 Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
 'other' has different root
